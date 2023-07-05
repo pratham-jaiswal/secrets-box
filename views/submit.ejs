@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+
+<div class="center-content">
+  <div class="card">
+    <h1>Secrets Box</h1>
+    <form class="form-area" action="/submit" method="POST">
+      <div class="input-container">
+        <p class="error"><%= err %></p>
+        <label for="secret">Share your secret</label>
+        <textarea name="secret" id="share-secret" cols="30" rows="10" placeholder="What's your secret?" required></textarea>
+      </div>
+      <button class="dark-btn" id="shareBtn" type="submit" disabled>Share</button>
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    </form>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+<%- include('partials/footer') %>

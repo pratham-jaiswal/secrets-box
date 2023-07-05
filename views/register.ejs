@@ -1,0 +1,45 @@
+<%- include('partials/header') %>
+
+<div class="center-content">
+  <div class="card">
+    <h1>Register</h1>
+    <form class="form-area" action="/register" method="POST">
+      <div class="input-container">
+        <p class="error"><%= err %></p>
+        <label for="email">Email</label>
+        <input type="email" name="username" id="reg-email" required>
+      </div>
+      <div class="input-container">
+        <label for="password">Password</label>
+        <input type="password" id="reg-password" name="password" required>
+        <div id="passwordConditions">
+          <span class="condition" id="minCharCondition"></span>
+          <span class="condition" id="alphabetCondition"></span>
+          <span class="condition" id="numberCondition"></span>
+          <span class="condition" id="symbolCondition"></span>
+          <span class="condition" id="spaceCondition"></span>
+        </div>
+      </div>
+      <button class="dark-btn" id="registerBtn" type="submit" disabled>Register</button>
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    </form>
+  </div>
+  <div class="alternate-auth">
+    <a href="/auth/google" class="auth-btn google">
+      <img src="assets/googlelogo.png">
+      <span>Continue with Google</span>
+    </a>
+    <a href="/auth/facebook" class="auth-btn facebook">
+      <img src="assets/fblogo.png">
+      <span>Continue with Facebook</span>
+    </a>
+    <a href="/auth/github" class="auth-btn github">
+      <img src="assets/githublogo.png">
+      <span>Continue with GitHub</span>
+    </a>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+<%- include('partials/header') %>
