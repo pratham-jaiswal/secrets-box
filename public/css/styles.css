@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+
+html {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+  background-color: rgb(211, 211, 211);
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+}
+
+body{
+  margin: 0;
+}
+
+.start-content {
+  /* max-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(30, 30, 30);
+  margin: 3vh;
+}
+
+.center-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(30, 30, 30);
+}
+
+.card {
+  border-radius: 5px;
+  color: rgb(30, 30, 30);
+}
+
+.posts{
+  margin: 3vh;
+  width: 60vw;
+}
+
+.post-card{
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  margin: 3vh 0;
+  padding: 3vh 1.5vw 1.5vh;
+}
+
+.post-content{
+  margin-bottom: 2vh;
+}
+
+.tools{
+  display: flex;
+  gap: 1vw;
+}
+
+.comments{
+  background-color: rgb(185, 185, 185);
+  padding: 2vh 1vw;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.comment-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  text-align: left;
+  font-size: 16px;
+}
+
+.add-comment{
+  flex-grow: 1;
+  padding: 12px 10px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.add-comment::placeholder{
+  color: white;
+}
+
+hr{
+  border-top: 1px solid black;
+}
+
+.hidden{
+  display: none;
+}
+
+.btns{
+  margin: 3vh 0;
+}
+
+.light-btn,
+.dark-btn {
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  margin: 0 7px;
+}
+
+.light-btn {
+  background-color: white;
+  color: rgb(30, 30, 30);
+}
+
+.dark-btn {
+  background-color: rgb(30, 30, 30);
+  color: white;
+}
+
+.light-btn:hover,
+.dark-btn:hover {
+  cursor: pointer;
+  background-color: rgb(109, 109, 109);
+  color: white;
+}
+
+.light-btn:disabled,
+.dark-btn:disabled {
+  background-color: rgb(165, 165, 165);
+  color: white;
+  cursor: default;
+}
+
+.form-area {
+  background-color: white;
+  padding: 5vh 5vw;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.error {
+  font-size: 14px;
+  color: red;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0 0 20px;
+  width: 25vw;
+  font-size: 18px;
+}
+
+.input-container * {
+  margin: 5px 0;
+}
+
+input, textarea{
+  font-family: "Ubuntu", sans-serif;
+  padding: 7px;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#passwordConditions{
+  display: none;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.alternate-auth{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.auth-btn{
+  width: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.google{
+  background-color: white;
+  color: black;
+  padding: 12px 10px;
+}
+
+.facebook{
+  background-color: #3b5998;
+  color: white;
+  padding: 8.25px 10px;
+}
+
+.github{
+  background-color: #171515;
+  color: white;
+  padding: 10.5px 10px;
+}
+
+.google img{
+  width: 18px;
+}
+
+.facebook img{
+  width: 24px;
+}
+
+.github img{
+  width: 20px;
+}
+
+.auth-btn:hover{
+  cursor: pointer;
+}
